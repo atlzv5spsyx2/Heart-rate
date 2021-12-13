@@ -51,11 +51,12 @@ print(ppg2*60)
 
 fig.savefig('Спектральные плотности', dpi = 1000)
 print('SNR')
-print(snr(A))
+print(snr2(A))
 
 fi, a = plt.subplots()
 a.plot(t[100:400],s[100:400])
 a.plot(t[100:400],irfft(B)[100:400])
+a.grid()
 
 sig1=butter_bandpass_filter(sig1,0.5,4,25)
 sig2G=butter_bandpass_filter(sig2G,0.5,4,25)

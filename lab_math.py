@@ -8,6 +8,26 @@ from scipy.ndimage import gaussian_filter
 from scipy.signal import find_peaks
 import math
 
+def snr2 (spec):
+    '''
+    
+    Соотношение сигнал шум
+
+    Parameters
+    ----------
+    spec : ndarray
+        Спектр сигнала.
+
+    Returns
+    -------
+    float
+        Значение SNR в децибелах.
+
+    '''
+    s=np.sum(spec)
+    m=np.max(spec)
+    return 10*math.log10(m/(s-m))
+
 def snr (spec):
     '''
     
