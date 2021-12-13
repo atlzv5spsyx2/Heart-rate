@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 11 21:55:03 2021
-
-@author: Ольга
-"""
 from lab_math import *
 
 T1=40*(10**(-3)) #частота дискретизации
